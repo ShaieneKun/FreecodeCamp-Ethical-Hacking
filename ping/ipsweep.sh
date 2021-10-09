@@ -17,3 +17,5 @@ do
 	# Removes trailing ":" and run the loop on different threads
 	tr -d ":" &
 done
+
+sleep 3
