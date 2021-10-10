@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # This is a basic utility that sends a ping to all devices on a 255.255.255.0 masked local network
-# Usage: pingsweep.sh 192.168.0
+# Usage: ipsweep.sh [ xxx.xxx.xxx ] | [ -d ]
 
 # Get user input for first 3 octets, defaults to "192.168.0"
 input=$1
