@@ -4,11 +4,18 @@
 # Usage: pingsweep.sh 192.168.0
 
 # Get user input for first 3 octets, defaults to "192.168.0"
-if [ "$1" == "" ]
+input=$1
+
+if [ "$input" == "" ]
+then
+	echo "Expected first three octets (xxx.xxx.xxx)"
+	echo "-d option defaults to 192.168.0"
+	exit 1
+elif [ "$input" == "-d" ]
 then
 	ip_start="192.168.0"
 else
-	ip_start=$1 
+	ip_start=$input 
 fi
 
 # Sends asynchronous ping
